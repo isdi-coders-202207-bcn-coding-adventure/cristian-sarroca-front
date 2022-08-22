@@ -12,6 +12,7 @@ const Layout = (): JSX.Element => {
   return (
     <StyledContainer>
       <Header />
+
       <Counter />
     </StyledContainer>
   );
