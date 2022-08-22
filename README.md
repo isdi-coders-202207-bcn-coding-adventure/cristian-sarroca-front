@@ -2,4 +2,4 @@ CODING ADVENTURE
 
 1. ¿Cuándo tengo que usar useCallback()?
 
-R:En react usamos el hook useCallback cuando queremos memoizar una función y que esta solo vuelva a ser invocada cada vez que cambie lo que hayamos puesto en la array dependecias del useCallback. De está manera solo se invocará a la funcion calllback una primera vez en el rendering inicial y posteriormente cada vez que la variable en el array de dependecias se modifique.
+R:En react usamos el hook useCallback cuando queremos memoizar una función, por detrás las funciones son objetos y de esta forma hacemos que esta funcion siempre sea la misma instancia y por lo tanto apunte al mismo sitio. Solo cambiará cuando cambie la variable en el array de dependecias del hook.
