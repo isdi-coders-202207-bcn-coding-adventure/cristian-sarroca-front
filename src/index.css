@@ -1,4 +1,10 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+  background-color: #243342;
+  font-family: "oxanium";
+}
+
+h1 {
+  color: white;
 }
