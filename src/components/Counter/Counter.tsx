@@ -1,19 +1,25 @@
+import StyledCounter from "./StyledCounter";
+
 const Counter = () => {
   return (
-    <ul className="counter">
-      <li className="counter__input">
-        <div>03</div> <div>days</div>
+    <StyledCounter>
+      <li className="counter-input">
+        <div className="counter-input__digit">02</div>
+        <div className="counter-input__text">days</div>
       </li>
-      <li className="counter__input">
-        <div>03</div> <div>hours</div>
+      <li className="counter-input">
+        <div className="counter-input__digit">20</div>
+        <div className="counter-input__text">hours</div>
       </li>
-      <li className="counter__input">
-        <div>03</div> <div>minutes</div>
+      <li className="counter-input">
+        <div className="counter-input__digit">34</div>
+        <div className="counter-input__text">minutes</div>
       </li>
-      <li className="counter__input">
-        <div>03</div> <div>seconds</div>
+      <li className="counter-input">
+        <div className="counter-input__digit">09</div>
+        <div className="counter-input__text">seconds</div>
       </li>
-    </ul>
+    </StyledCounter>
   );
 };
 export default Counter;
