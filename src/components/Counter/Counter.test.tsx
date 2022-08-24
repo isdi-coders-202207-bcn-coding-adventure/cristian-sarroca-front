@@ -4,7 +4,7 @@ import Counter, { ICounter } from "./Counter";
 
 describe("Given a Counter component", () => {
   describe("When it is intantiated", () => {
-    test("then it should show a counter with 10 days, 22 hours, 15 minutes and 30 seconds", () => {
+    test("then it should show a counters with 10 days, 22 hours, 15 minutes and 30 seconds", () => {
       const currentTime: ICounter = {
         days: 10,
         hours: 22,
