@@ -1,15 +1,20 @@
 import StyledCounter from "./StyledCounter";
 import { useEffect, useState } from "react";
 import limitDate from "../../data/limitDate";
-
+export interface ICounter {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
 const Counter = () => {
-  const initialState = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  const initialState: ICounter = { days: 0, hours: 0, minutes: 0, seconds: 0 };
 
   const [timeLeft, setTimeLeft] = useState(initialState);
 
   const calculateTimeLeft = () => {
     const difference = +new Date(limitDate) - +new Date();
-    const timeCalculated = {
+    const timeCalculated: ICounter = {
       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
       hours: Math.floor(
         (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)

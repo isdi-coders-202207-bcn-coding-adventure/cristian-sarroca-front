@@ -3,10 +3,6 @@ import "@fontsource/oxanium";
 
 const StyledCounter = styled.ul`
   height: 80vh;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   list-style: none;
   margin: 0;
   display: flex;
