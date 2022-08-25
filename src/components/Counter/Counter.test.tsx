@@ -4,7 +4,7 @@ import Counter, { ICounter } from "./Counter";
 
 describe("Given a Counter component", () => {
   describe("When it is intantiated", () => {
-    test("then it should show a counters with 10 days, 22 hours, 15 minutes and 30 seconds", () => {
+    test("then it should show a counter with 10 days, 22 hours, 15 minutes and 30 seconds", () => {
       const currentTime: ICounter = {
         days: 10,
         hours: 22,
@@ -13,8 +13,9 @@ describe("Given a Counter component", () => {
       };
 
       const setUseState = jest.fn();
-      const useStateMock: any = () => [currentTime, setUseState];
-      jest.spyOn(React, "useState").mockImplementation(useStateMock);
+      jest
+        .spyOn(React, "useState")
+        .mockImplementation(() => [currentTime, setUseState]);
 
       render(<Counter />);
 
@@ -38,8 +39,9 @@ describe("Given a Counter component", () => {
       };
 
       const setUseState = jest.fn();
-      const useStateMock: any = () => [currentTime, setUseState];
-      jest.spyOn(React, "useState").mockImplementation(useStateMock);
+      jest
+        .spyOn(React, "useState")
+        .mockImplementation(() => [currentTime, setUseState]);
 
       jest.spyOn(global, "setTimeout");
 
@@ -47,6 +49,7 @@ describe("Given a Counter component", () => {
 
       expect(setTimeout).toHaveBeenCalledTimes(1);
     });
+
     test("setUseState have been called", () => {
       jest.useFakeTimers();
       const currentTime: ICounter = {
@@ -57,8 +60,9 @@ describe("Given a Counter component", () => {
       };
 
       const setUseState = jest.fn();
-      const useStateMock: any = () => [currentTime, setUseState];
-      jest.spyOn(React, "useState").mockImplementation(useStateMock);
+      jest
+        .spyOn(React, "useState")
+        .mockImplementation(() => [currentTime, setUseState]);
 
       render(<Counter />);
       jest.advanceTimersByTime(2000);
